@@ -1,0 +1,9 @@
+.notUser{
+    display: flex;
+    align-self: flex-start;
+}
+
+.user{
+    display: flex;
+    align-self: center;
+}

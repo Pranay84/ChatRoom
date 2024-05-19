@@ -1,0 +1,53 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    height: 100vh;
+    margin: 0px;
+    border-radius: 8px;
+  }
+  
+  .dataContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 0px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 260px;
+    height: 100px;
+  }
+  
+  .roomForm{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .inputDataContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3px;
+    align-items: center;
+  }
+  
+  .inputField{
+    padding: 2px;
+    padding-left: 10px;
+  }
+  
+  .submitButton{
+    align-self: flex-end;
+    background-color: #3B71CA;
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
