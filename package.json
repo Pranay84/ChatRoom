@@ -2,6 +2,7 @@
   "scripts": {
     "frontend": "cd front_end && npm start",
     "backend": "cd Node && npm start",
+    "build": "cd front_end && react-scripts build",
     "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "dependencies": {

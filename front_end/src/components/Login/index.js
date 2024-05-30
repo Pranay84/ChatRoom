@@ -31,11 +31,6 @@ const Login = () => {
     }
   }
 
-  const use = () => {
-    setTimeout(() => {
-    }, 1000)
-  }
-
   return(
    <div className='mainContainer' >
     <h1 className='heading' >AnonChat</h1>

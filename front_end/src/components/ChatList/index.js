@@ -1,3 +1,5 @@
+// eslint-disable-next-line react-hooks/exhaustive-deps
+
 import { useContext, useEffect, useState } from "react"
 import RoomContext from "../../context/roomContext"
 import EachChat from "../EachChat"
@@ -40,12 +42,11 @@ const ChatList = props => {
 
     useEffect(() => {
         getData()
+        // eslint-disable-next-line
     }, [messageDatas])
 
     console.log(allData)
     console.log(isUsers)
-
-    // getData()
 
     return (
         <ChatLists>
