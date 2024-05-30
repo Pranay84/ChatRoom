@@ -48,7 +48,9 @@ io.on("connection", async (socket) => {
     socket.on("sendMessage", async (data) => {
         const {username, room, message, timeStamp} = data
         console.log(room)
-        const res = await client.query(`insert into ${room} (uname, message , timeStamp) values ('${username}', '${message}', '${timeStamp}')`)
+        const hashMssg = await bcrypt.hash(message, 10)
+        console.log(hashMssg)
+        const res = await client.query(`insert into ${room} (uname, message , timeStamp) values ('${username}', '${hashMssg}', '${timeStamp}')`)
         console.log(res)
         io.to(room).emit("recieveMessage", data)
     })

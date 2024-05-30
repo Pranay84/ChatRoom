@@ -1,12 +1,11 @@
-import { useContext, useState } from "react"
-import bcrypt from "bcryptjs-react";
+import { useContext } from "react"
 import RoomContext from "../../context/roomContext"
 import './index.css'
 
 import {MainListItem, TopHead, Sender, SentTime, MessageData, MainAlign} from './styledComponents'
 
 const EachChat = props => {
-    const {username, isUsers, setCheckUser} = useContext(RoomContext)
+    const {username} = useContext(RoomContext)
     // const [isUser, setUser] = useState(false)
     const {details} = props
     const {id, uname, message, timestamp} = details

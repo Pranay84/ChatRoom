@@ -1,9 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import React, { Component, createContext, useState } from "react"
-import io from 'socket.io-client'
+import React, { Component } from "react"
 import Login from './components/Login'
 import RoomContext from './context/roomContext'
-import Rooms from './context/roomContext'
 import Chats from './components/Chats'
 
 class App extends Component {

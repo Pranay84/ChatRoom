@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { IoSend } from "react-icons/io5";
 import RoomContext from "../../context/roomContext";
 import ChatList from "../ChatList";
-import { useNavigate } from "react-router-dom";
 
 import './index.css'
 
@@ -12,7 +11,6 @@ function Chats(){
     const {room, username, socket} = useContext(RoomContext)
     const [message, setMessage] = useState('')
     const [messageDatas, setMessageDatas] = useState()
-    const navigate = useNavigate()
 
     // console.log(socket.connected)
 

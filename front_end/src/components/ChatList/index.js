@@ -1,21 +1,19 @@
 import { useContext, useEffect, useState } from "react"
-import axios from "axios";
 import RoomContext from "../../context/roomContext"
 import EachChat from "../EachChat"
 
 import {MainChatContainer, ChatLists} from './styledComponents'
 
 const ChatList = props => {
-    const {room, username, messageDatas} = props
+    const {room, messageDatas} = props
     const [allData, setData] = useState([])
-    const [isCalled, setCall] = useState(0)
+    const [isCalled] = useState(0)
     const {isUsers} = useContext(RoomContext)
     console.log(room)
     
     // console.log(socket)
     // console.log(1)
 
-    let time = ''
 
     console.log(messageDatas)
 

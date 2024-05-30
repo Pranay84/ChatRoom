@@ -1,15 +1,21 @@
 .mainContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
     background-color: black;
     height: 100vh;
+    width: auto;
     margin: 0px;
     border-radius: 8px;
   }
   
+.container{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  margin-top: 10vh;
+}
+
   .dataContainer{
     display: flex;
     flex-direction: column;
@@ -51,3 +57,58 @@
     text-align: center;
     margin-bottom: 10px;
   }
+
+  .typper{
+    display: flex;
+    width: 650px;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+
+  .typewritter h1{
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    font-size: 22px;
+    text-align: left;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    10% { border-color: orange }
+}
+
+.heading{
+  color: white;
+  font-family: cursive;
+  text-align: left;
+}
+
+.p{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  color: white;
+  margin-top: auto;
+  font-size: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
