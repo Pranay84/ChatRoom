@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -35,26 +35,17 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    permissions:
-      id-token: write #This is required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
           name: .net-app
-      
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E58B4A2A569245C3AE39FAA14CD68E6D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_102E9854672E4F93BDABCC839E29436A }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1F0E745F4BAB4655A89AB171C51DA83B }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -62,5 +53,5 @@ jobs:
         with:
           app-name: 'anonChats'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E55EBD187B054725897040373289DF6D }}
           package: .
-          
