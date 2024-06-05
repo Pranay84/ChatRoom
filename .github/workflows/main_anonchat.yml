@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'anonchat'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8E7AA1557FAC49648B2E041A414B1948 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_828ECCE8E95449B8BE02E545B2FEB4B2 }}
           package: .
