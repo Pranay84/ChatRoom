@@ -20,6 +20,6 @@
     "dev": "concurrently \"npm run start\" \"nodemon app.js\" ",
     "eject": "cd ./front_end && npm run eject"
   },
-  "author": "",
+  "author": "Pranay Kotagiri",
   "license": "ISC"
 }
