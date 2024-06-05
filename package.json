@@ -12,8 +12,10 @@
     "socket.io": "^4.7.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd ./front_end && npm run build"
+    "build": "cd ./front_end && npm run build",
+    "start": "cd ./front_end && npm run start",
+    "test": "cd ./front_end && npm run build",
+    "dev": "concurrently \"npm run start\" \"nodemon app.js\" "
   },
   "author": "",
   "license": "ISC"
