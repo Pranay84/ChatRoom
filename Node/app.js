@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const http = require("http")
+const path = require("path")
 const {Server} = require("socket.io")
 const cors = require("cors")
 const client = require("./db")
@@ -17,6 +18,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions))
 app.use(express.json())
+app.use(express.static("../front_end/build"))
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "front_end", "build", "index.html"))
+})
 
 const server = http.createServer(app)
  
